@@ -11,7 +11,8 @@ import { UserPanelComponent } from './components/userpanel.component';
 import { DashboardComponent } from './components/dashboard.component';
 import { MarkdownComponent } from './components/markdown.component';
 import { EntryViewerComponent } from './components/entry-viewer.component';
-import { GeneralInformationComponent } from './components/general-information.component';
+import { HomeComponent } from './components/home.component';
+import { GeneralInfoComponent } from './components/general-info.component';
 import { DataService } from './services/data.service';
 import { CompetencesComponent } from './components/competences.component';
 
@@ -28,7 +29,8 @@ import * as router from '@angular/router';
                   DashboardComponent,
                   EntryViewerComponent,
                   MarkdownComponent,
-                  GeneralInformationComponent,
+                  HomeComponent,
+                  GeneralInfoComponent,
                   CompetencesComponent
                 ],
   providers:    [
