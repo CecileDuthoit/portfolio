@@ -11,8 +11,9 @@ import { UserPanelComponent } from './components/userpanel.component';
 import { DashboardComponent } from './components/dashboard.component';
 import { MarkdownComponent } from './components/markdown.component';
 import { EntryViewerComponent } from './components/entry-viewer.component';
-import { PresentationComponent } from './components/presentation.component';
+import { GeneralInformationComponent } from './components/general-information.component';
 import { DataService } from './services/data.service';
+import { CompetencesComponent } from './components/competences.component';
 
 import * as router from '@angular/router';
 
@@ -27,12 +28,15 @@ import * as router from '@angular/router';
                   DashboardComponent,
                   EntryViewerComponent,
                   MarkdownComponent,
-                  PresentationComponent
+                  GeneralInformationComponent,
+                  CompetencesComponent
                 ],
   providers:    [
     DataService,
   ],
   bootstrap:    [ AppComponent ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA],
 })
 
 export class AppModule { }

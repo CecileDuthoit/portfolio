@@ -3,13 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent }  from './components/app.component';
 import { UserPanelComponent } from './components/userpanel.component';
 import { DashboardComponent } from './components/dashboard.component';
-import { PresentationComponent } from './components/presentation.component';
+import { GeneralInformationComponent } from './components/general-information.component';
+import { CompetencesComponent } from './components/competences.component';
 
 const appRoutes: Routes = [
   { path: 'portfolio', component: DashboardComponent },
   { path: 'portfolio/:filter/:value', component: DashboardComponent },
-  { path: 'presentation', component: PresentationComponent },
-  { path: '**', component: PresentationComponent  }
+  { path: 'presentation', component: GeneralInformationComponent },
+  { path: 'competences', component: CompetencesComponent },
+ { path: '**', component: GeneralInformationComponent  }
 ];
 
 @NgModule({

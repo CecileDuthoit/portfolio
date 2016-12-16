@@ -1,10 +1,9 @@
-import { Component, Input, ViewChild, ElementRef, trigger,
-         state, style, transition, animate } from '@angular/core';
-import { Http, Response }   from '@angular/http';
-import { Observable }       from 'rxjs/Observable';
-import { DataService }      from '../services/data.service'
-import { Entry, ContentType, ExperienceType  }            from '../entries/common'
-import { DomSanitizer, SafeHtml,SafeUrl,SafeStyle } from '@angular/platform-browser';
+import { Component, Input, ViewChild, ElementRef, trigger, state, style, transition, animate }  from '@angular/core';
+import { Http, Response }                                                                       from '@angular/http';
+import { Observable }                                                                           from 'rxjs/Observable';
+import { DataService }                                                                          from '../services/data.service'
+import { Competence, CompetenceType, Entry, ContentType, ExperienceType  }                      from '../entries/common'
+import { DomSanitizer, SafeHtml,SafeUrl,SafeStyle }                                             from '@angular/platform-browser';
 
 @Component({
     selector: 'entry-viewer',
@@ -17,6 +16,7 @@ export class EntryViewerComponent  {
 
     public contentType = ContentType
     public experienceType = ExperienceType
+    public competenceType = CompetenceType
     private _expanded : boolean = false;
     constructor(private sanitizer : DomSanitizer, private dataService : DataService) {        
         

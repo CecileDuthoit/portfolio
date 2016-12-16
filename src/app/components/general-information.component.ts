@@ -6,11 +6,11 @@ import { Entry, ContentType, ExperienceType  }            from '../entries/commo
 import { DomSanitizer, SafeHtml,SafeUrl,SafeStyle } from '@angular/platform-browser';
 
 @Component({
-    selector: 'presentation',
-    templateUrl: 'app/components/presentation.template.html'
+    selector: 'general-information',
+    templateUrl: 'app/components/general-information.template.html'
 })
 
-export class PresentationComponent  { 
+export class GeneralInformationComponent  { 
     constructor() {        
         
     }

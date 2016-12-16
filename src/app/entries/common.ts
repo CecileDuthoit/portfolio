@@ -32,6 +32,21 @@ export interface Content
     contentValue : string
 }
 
+export enum CompetenceType {
+    SmartDevices,
+    Communication, 
+    IMiddlewareAndServices,
+    DataProcessing,
+    HumanitiesAndInnovation,
+    EnglishAndProject
+}
+
+export interface Competence 
+{
+    name : string, 
+    type : CompetenceType
+}
+
 /**
  * Represents an entry in the portfolio.
  */
@@ -43,6 +58,7 @@ export interface Entry
     tags : string[]
     abstract : string
     conclusion : string
+    competences : Competence[]
     content : Content
     thumbnailUrl: string
 }
@@ -73,5 +89,17 @@ function experienceType2Str(ct : ExperienceType) : string {
     }
 }
 
+function competenceType2Str(ct : CompetenceType) : string {
+    switch(ct) {
+        case CompetenceType.Communication: return "Communication";
+        case CompetenceType.DataProcessing: return "Data Processing";
+        case CompetenceType.EnglishAndProject: return "English & Project";
+        case CompetenceType.HumanitiesAndInnovation: return "Humanities & Innovation";
+        case CompetenceType.SmartDevices: return "Smart Devices";
+        case CompetenceType.IMiddlewareAndServices: return "Middleware & Services";
+        default: return "Unknown"
+    }
+}
+
 export { library }
-export { experienceType2Str }
+export { experienceType2Str, competenceType2Str }

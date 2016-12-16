@@ -3,7 +3,7 @@ import { Component, Input, ViewChild, ElementRef, trigger,
 import { Http, Response }   from '@angular/http';
 import { Observable }       from 'rxjs/Observable';
 import { DataService }      from '../services/data.service'
-import { Entry, experienceType2Str }            from '../entries/common'
+import { Entry, experienceType2Str, competenceType2Str }            from '../entries/common'
 import * as $               from 'jquery'
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -17,7 +17,7 @@ export interface Filter {
     displayName : string
 }
 
-export type FilterFunction = ((entry : Entry) => string);
+export type FilterFunction = ((entry : Entry) => string[]);
 
 @Component({
     selector: 'dashboard',
@@ -82,7 +82,8 @@ export class DashboardComponent  {
     constructor(private route : ActivatedRoute, private dataService : DataService) {
         this.filters = [
             { name: "category", displayName: "Category" },
-            { name: "experienceType", displayName: "Experience Type" }
+            { name: "experienceType", displayName: "Experience Type" },
+            { name: "competenceType", displayName: "Competence Type" }
         ]
 
         this.filterName = "category"
@@ -94,11 +95,13 @@ export class DashboardComponent  {
     getFilterFunction(filterName : string) : FilterFunction {
         switch(filterName) {
             case "category":
-                return (entry : Entry) => { return entry.category }
+                return (entry : Entry) => { return [entry.category] }
             case "experienceType":
-                return (entry : Entry) => { return experienceType2Str(entry.experienceType) }
+                return (entry : Entry) => { return [experienceType2Str(entry.experienceType)] }
+            case "competenceType":
+                return (entry : Entry) => { return entry.competences.map((competence) => competenceType2Str(competence.type)) }
             default:
-                return (entry : Entry) => { return entry.category }
+                return (entry : Entry) => { return [entry.category] }
         }
     }
 
@@ -123,11 +126,13 @@ export class DashboardComponent  {
     computeCategories() {
         let categories : { [id : string]: Entry[] } = {}
         for(let entry of this.dataService.library.entries) {
-            let filterValue = this.filterFunction(entry)
-            if(!(filterValue in categories))
-                categories[filterValue] = []
+            let filterValues = this.filterFunction(entry)
+            for (let filterValue of filterValues) {
+                if(!(filterValue in categories))
+                    categories[filterValue] = []
             
-            categories[filterValue].push(entry)
+                categories[filterValue].push(entry)
+            }
         }
 
         this.entryByField = categories
@@ -140,7 +145,7 @@ export class DashboardComponent  {
         if(this.filterValue == "all")
             return true
         else {
-            return this.filterFunction(entry) == this.filterValue
+            return this.filterFunction(entry).indexOf(this.filterValue) != -1
         }
     }
 
