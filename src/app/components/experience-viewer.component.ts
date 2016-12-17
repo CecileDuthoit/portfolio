@@ -28,7 +28,7 @@ export class ExperienceViewerComponent  {
      */
     get minHeight() {
         var minHeight = this._expanded ? "800px" : "200px"
-        var value = this.experience.content.contentType == ContentType.PDFDocumentURL ? minHeight : "200px"
+        var value = this.experience.content[0].contentType == ContentType.PDFDocumentURL ? minHeight : "200px"
         return this.sanitizer.bypassSecurityTrustStyle(value)
     }
 
