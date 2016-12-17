@@ -1,11 +1,11 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA }      from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent }  from './components/app.component';
-import { UserPanelComponent } from './components/userpanel.component';
-import { DashboardComponent } from './components/dashboard.component';
-import { GeneralInfoComponent } from './components/general-info.component';
-import { HomeComponent } from './components/home.component';
-import { CompetencesComponent } from './components/competences.component';
+import { AppComponent }  from './components/app_layout_components/app.component';
+import { UserPanelComponent } from './components/app_layout_components/userpanel.component';
+import { DashboardComponent } from './components/experience_components/dashboard.component';
+import { GeneralInfoComponent } from './components/general_info _components/general-info.component';
+import { HomeComponent } from './components/home_components/home.component';
+import { CompetencesComponent } from './components/competence_components/competences.component';
 
 const appRoutes: Routes = [
   { path: 'portfolio', component: DashboardComponent },

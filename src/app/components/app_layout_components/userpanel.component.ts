@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map'
 
 @Component({
     selector: 'user-panel',
-    templateUrl: 'app/components/userpanel.template.html'
+    templateUrl: './userpanel.template.html'
 })
 
 export class UserPanelComponent  { 

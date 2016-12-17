@@ -2,8 +2,8 @@ import { Component, Input, ViewChild, ElementRef, trigger,
          state, style, transition, animate }                            from '@angular/core';
 import { Http, Response }                                               from '@angular/http';
 import { Observable }                                                   from 'rxjs/Observable';
-import { DataService }                                                  from '../services/data.service'
-import { Experience, experienceType2Str, competenceType2Str }           from '../experiences/common'
+import { DataService }                                                  from '../../services/data.service'
+import { Experience, experienceType2Str, competenceType2Str }           from '../../experiences/common'
 import * as $                                                           from 'jquery'
 import { Router, ActivatedRoute }                                       from '@angular/router';
 
@@ -21,7 +21,7 @@ export type FilterFunction = ((experience : Experience) => string[]);
 
 @Component({
     selector: 'dashboard',
-    templateUrl: 'app/components/dashboard.template.html',
+    templateUrl: './dashboard.template.html',
     animations: [
         trigger('isActive', [
             transition(

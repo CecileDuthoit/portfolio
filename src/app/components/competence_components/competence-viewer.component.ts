@@ -1,12 +1,12 @@
-import { CompetenceType }                                                   from '../competences/common';
-import { CompetenceView }                                                   from '../competences/common';
+import { CompetenceType }                                                   from '../../competences/common';
+import { CompetenceView }                                                   from '../../competences/common';
 import { Component, Input, trigger, state, style, transition, animate }     from '@angular/core';
-import { DataService }                                                      from '../services/data.service'
+import { DataService }                                                      from '../../services/data.service'
 import { DomSanitizer, SafeHtml, SafeUrl,SafeStyle }                        from '@angular/platform-browser';
 
 @Component({
     selector: 'competence-viewer',
-    templateUrl: `app/components/competence-viewer.template.html`,
+    templateUrl: `./competence-viewer.template.html`,
 })
 
 export class CompetenceViewerComponent {

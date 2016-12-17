@@ -1,6 +1,6 @@
-import { CompetenceView }                                                   from '../competences/common';
+import { CompetenceView }                                                   from '../../competences/common';
 import { Component, Input, trigger, state, style, transition, animate }     from '@angular/core';
-import { DataService }                                                      from '../services/data.service'
+import { DataService }                                                      from '../../services/data.service'
 import * as $                                                               from 'jquery'
 import { Router, ActivatedRoute }                                           from '@angular/router';
 
@@ -11,7 +11,7 @@ export interface Field {
 
 @Component({
     selector: 'competences',
-    templateUrl: `app/components/competences.template.html`,
+    templateUrl: `./competences.template.html`,
 })
 
 export class CompetencesComponent {

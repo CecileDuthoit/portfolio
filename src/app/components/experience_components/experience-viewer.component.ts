@@ -1,14 +1,14 @@
 import { Component, Input, ViewChild, ElementRef, trigger, state, style, transition, animate }  from '@angular/core';
 import { Http, Response }                                                                       from '@angular/http';
 import { Observable }                                                                           from 'rxjs/Observable';
-import { DataService }                                                                          from '../services/data.service'
-import { Experience, ContentType, ExperienceType  }                                             from '../experiences/common'
-import { CompetenceType }                                                                       from '../competences/common';
+import { DataService }                                                                          from '../../services/data.service'
+import { Experience, ContentType, ExperienceType  }                                             from '../../experiences/common'
+import { CompetenceType }                                                                       from '../../competences/common';
 import { DomSanitizer, SafeHtml,SafeUrl,SafeStyle }                                             from '@angular/platform-browser';
 
 @Component({
     selector: 'experience-viewer',
-    templateUrl: 'app/components/experience-viewer.template.html'
+    templateUrl: './experience-viewer.template.html'
 })
 
 export class ExperienceViewerComponent  { 
