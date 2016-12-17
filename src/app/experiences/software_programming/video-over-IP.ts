@@ -27,11 +27,9 @@ Writing this papers made me read a lot of IEEE papers about the GSM network, its
 The technical aspect, by experimenting an attack was extremely interesting for different reasons. 
 `,
 
-    content: {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/EVS_poster.pdf`
-    },
+    content: [
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/EVS_poster.pdf` }
+    ],
 };
 
 common.library.experiences.push(Experience)

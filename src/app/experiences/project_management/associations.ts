@@ -34,19 +34,10 @@ TODO
 This part will present the associations and groups I have been part of during my studies and what it brought me technically and humanely.
 `,
 
-    content: {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/Amicale_paper_analysis.pdf`
-//        `assets/Amicale_poster_analysis.pdf`
-    },
-  /*
-    {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/Security_process_final_paper.pdf`
-    }
-    */
+    content: [
+    { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Amicale_paper_analysis.pdf` },
+    { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Amicale_poster_analysis.pdf` }
+    ],
 };
 
 common.library.experiences.push(Experience)

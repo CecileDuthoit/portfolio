@@ -1,4 +1,4 @@
-import './smart_devices/AIME'
+import './electronics/AIME'
 import './wireless_networks/gsm-network'
 import './wireless_networks/mobile-broadband-networks'
 import './wireless_networks/modulation'

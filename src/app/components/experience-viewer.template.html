@@ -26,24 +26,21 @@
                 <span (click)="toogleExpand()" class="card-title grey-text text-darken-4">{{experience.name}}<i class="material-icons right">click to close assets</i></span>
 
                 <!-- PDF Document -->
-             <!--   <div class="chip" *ngFor="let content of experience.content">  -->
-                    <div *ngIf="experience.content.contentType == contentType.PDFDocumentURL">
-                        
+                <div *ngFor="let content of experience.content"> 
+                    <div *ngIf="content.contentType == contentType.PDFDocumentURL">
                         <div style="text-align: center" class="margin-bottom: 1em;">
                             <a class="waves-effect waves-light btn" 
                             target="_blank"
-                            [href]="sanitizeRessourceUrl(experience.content.contentValue)">
+                            [href]="sanitizeRessourceUrl(content.contentValue)">
                             Download PDF
                             </a>
-                            <br />
-                            ~
                         </div>
                         
-                        <object [data]="sanitizeRessourceUrl(experience.content.contentValue)" type="application/pdf" width="100%" height="800px">
-                            <a [href]="sanitizeRessourceUrl(experience.content.contentValue)">Link</a>
+                        <object [data]="sanitizeRessourceUrl(content.contentValue)" type="application/pdf" width="100%" height="800px">
+                            <a [href]="sanitizeRessourceUrl(content.contentValue)">Link</a>
                         </object>
                     </div>
-              <!--  </div>  -->
+                </div> 
 
                 <!-- Markdown document -->
                 <div *ngIf="experience.content.contentType == contentType.RawMarkdownDocument">

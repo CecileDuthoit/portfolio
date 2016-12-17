@@ -30,18 +30,10 @@ I wrote this document with a classmate after a practical class about radio telec
 TODO
 `,
 
-    content: {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/PM-PSK_ppt.pdf`
-    },
-  /*
-    {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/Concevoir_son_propre_démodulateur_radio.pdf`
-    }
-    */
+    content: [
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/PM-PSK_ppt.pdf`},
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Concevoir_son_propre_démodulateur_radio.pdf` }
+    ],
 };
 
 common.library.experiences.push(Experience)

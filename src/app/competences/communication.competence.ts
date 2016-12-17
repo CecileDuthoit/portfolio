@@ -6,7 +6,10 @@ export class CommunicationSkills {
     public skillsValues : Skill[] ;
 
     public constructor(private skills : Skills) { 
-        this.skillsValues = [skills.findById(11), skills.findById(12), skills.findById(13)];
+        this.skillsValues = [skills.findById(20), skills.findById(21), skills.findById(22),
+        skills.findById(23), skills.findById(24), skills.findById(25), skills.findById(26),
+        skills.findById(27), skills.findById(28), skills.findById(29), skills.findById(201), 
+        skills.findById(202)];
     }
 
     get skillsCom() : Skill[] {
@@ -22,7 +25,7 @@ let comSkills = new CommunicationSkills(skills);
 let com : common.CompetenceView = {
     name: "Communication",
     type: CompetenceType.Communication,
-    thumbnailUrl: "../../images/wallpapers/colored_rain.jpg",
+    thumbnailUrl: "../../images/wallpapers/waves.jpeg",
     skills: comSkills.skillsCom,
 };
 

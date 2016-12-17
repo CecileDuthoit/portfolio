@@ -26,11 +26,9 @@ TODO
 TODO
 `,
 
-    content: {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/Final_paper_Aware-D.pdf`
-    },
+    content: [
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Final_paper_Aware-D.pdf` }
+    ],
 };
 
 common.library.experiences.push(Experience)

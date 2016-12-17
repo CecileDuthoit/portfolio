@@ -6,7 +6,7 @@ let allSkills = new Skills();
 let Experience : common.Experience = {
     name: "Design and Realization of a Gaz Sensor",
     experienceType: common.ExperienceType.Academic,
-    category: "Smart Devices",
+    category: "Electronics",
 
     thumbnailUrl: "../images/wallpapers/hardware.jpg",
 
@@ -26,11 +26,8 @@ TODO
 TODO
 `,
     
-    content: {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/EVS_poster.pdf`
-    },
+    content: []
+      
 };
 
 common.library.experiences.push(Experience)

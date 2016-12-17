@@ -35,12 +35,10 @@ Different from narrow band networks, such as LoRa or SigFox analyzed above, mobi
 TODO
 `,
 
-    content: {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/LTE_Architecture.pdf`
-        //assets/LTE_link_budget_example.pdf
-    },
+    content: [
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/LTE_Architecture.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/LTE_link_budget_example.pdf`}
+    ],
 };
 
 common.library.experiences.push(Experience)

@@ -46,7 +46,7 @@ export interface Experience
     abstract : string
     conclusion : string
     competences : Skill[]
-    content : Content
+    content : Content[]
     thumbnailUrl: string
 }
 

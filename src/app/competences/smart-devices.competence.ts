@@ -6,7 +6,9 @@ export class SDSkills {
     public skillsValues : Skill[] ;
 
     public constructor(private skills : Skills) { 
-        this.skillsValues = [skills.findById(11), skills.findById(12), skills.findById(13)];
+        this.skillsValues = [skills.findById(11), skills.findById(12), skills.findById(13), 
+        skills.findById(14), skills.findById(15), skills.findById(16), skills.findById(17), 
+        skills.findById(18), skills.findById(10)]
     }
 
     get skillsSD() : Skill[] {

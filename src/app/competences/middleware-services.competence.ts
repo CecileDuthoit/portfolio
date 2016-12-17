@@ -6,7 +6,7 @@ export class MiddlewareSkills {
     public skillsValues : Skill[] ;
 
     public constructor(private skills : Skills) { 
-        this.skillsValues = [skills.findById(11), skills.findById(12), skills.findById(13)];
+        this.skillsValues = [];
     }
 
     get skillsMid() : Skill[] {

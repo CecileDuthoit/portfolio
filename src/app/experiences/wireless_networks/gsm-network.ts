@@ -64,18 +64,10 @@ The technical aspect, by experimenting an attack was extremely interesting for d
     // Ici, Le contenu de l'entrée du portfolio. 
     // Cela peut être un document PDF, markdown ou un simple lien.
     // ----------------------------------------------------------
-    content: {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/Passive_interception_on_GSM_network.pdf`
-    },
-  /*
-    {
-        contentType: common.ContentType.PDFDocumentURL,
-        contentValue: 
-        `assets/Security_process_final_paper.pdf`
-    }
-    */
+    content: [
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Passive_interception_on_GSM_network.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Security_process_final_paper.pdf` }
+    ],
 };
 
 common.library.experiences.push(Experience)
