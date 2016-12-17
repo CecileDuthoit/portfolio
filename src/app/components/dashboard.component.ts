@@ -1,15 +1,15 @@
 import { Component, Input, ViewChild, ElementRef, trigger,
-         state, style, transition, animate } from '@angular/core';
-import { Http, Response }   from '@angular/http';
-import { Observable }       from 'rxjs/Observable';
-import { DataService }      from '../services/data.service'
-import { Entry, experienceType2Str, competenceType2Str }            from '../entries/common'
-import * as $               from 'jquery'
-import { Router, ActivatedRoute } from '@angular/router';
+         state, style, transition, animate }                            from '@angular/core';
+import { Http, Response }                                               from '@angular/http';
+import { Observable }                                                   from 'rxjs/Observable';
+import { DataService }                                                  from '../services/data.service'
+import { Experience, experienceType2Str, competenceType2Str }           from '../experiences/common'
+import * as $                                                           from 'jquery'
+import { Router, ActivatedRoute }                                       from '@angular/router';
 
 export interface Field {
     name : string
-    entries : Entry[]    
+    experiences : Experience[]    
 }
 
 export interface Filter {
@@ -17,7 +17,7 @@ export interface Filter {
     displayName : string
 }
 
-export type FilterFunction = ((entry : Entry) => string[]);
+export type FilterFunction = ((experience : Experience) => string[]);
 
 @Component({
     selector: 'dashboard',
@@ -60,11 +60,11 @@ export type FilterFunction = ((entry : Entry) => string[]);
     ]
 })
 export class DashboardComponent  { 
-    entryByField: { [id : string]: Entry[] }
+    ExperienceByField: { [id : string]: Experience[] }
 
     /** 
-     * Function filtering entries : returns a 'category' string from an entry. 
-     * It is used to classify entries.
+     * Function filtering experiences : returns a 'category' string from an Experience. 
+     * It is used to classify experiences.
      */
     filterFunction: FilterFunction;
     /**
@@ -81,7 +81,7 @@ export class DashboardComponent  {
 
     constructor(private route : ActivatedRoute, private dataService : DataService) {
         this.filters = [
-            { name: "category", displayName: "Category" },
+            { name: "category", displayName: "Domain" },
             { name: "experienceType", displayName: "Experience Type" },
             { name: "competenceType", displayName: "Competence Type" }
         ]
@@ -95,13 +95,13 @@ export class DashboardComponent  {
     getFilterFunction(filterName : string) : FilterFunction {
         switch(filterName) {
             case "category":
-                return (entry : Entry) => { return [entry.category] }
+                return (experience : Experience) => { return [experience.category] }
             case "experienceType":
-                return (entry : Entry) => { return [experienceType2Str(entry.experienceType)] }
+                return (experience : Experience) => { return [experienceType2Str(experience.experienceType)] }
             case "competenceType":
-                return (entry : Entry) => { return entry.competences.map((competence) => competenceType2Str(competence.type)) }
+                return (experience : Experience) => { return experience.competences.map((competence) => competenceType2Str(competence.id)) }
             default:
-                return (entry : Entry) => { return [entry.category] }
+                return (experience : Experience) => { return [experience.category] }
         }
     }
 
@@ -124,50 +124,50 @@ export class DashboardComponent  {
      * Computes the distinct categories based on the filter function.
      */
     computeCategories() {
-        let categories : { [id : string]: Entry[] } = {}
-        for(let entry of this.dataService.library.entries) {
-            let filterValues = this.filterFunction(entry)
+        let categories : { [id : string]: Experience[] } = {}
+        for(let experience of this.dataService.library.experiences) {
+            let filterValues = this.filterFunction(experience)
             for (let filterValue of filterValues) {
                 if(!(filterValue in categories))
                     categories[filterValue] = []
             
-                categories[filterValue].push(entry)
+                categories[filterValue].push(experience)
             }
         }
 
-        this.entryByField = categories
+        this.ExperienceByField = categories
     }
 
     /**
-     * Returns true if the given entry is active in the current context.
+     * Returns true if the given experience is active in the current context.
      */
-    isActive(entry : Entry) : boolean {
+    isActive(experience : Experience) : boolean {
         if(this.filterValue == "all")
             return true
         else {
-            return this.filterFunction(entry).indexOf(this.filterValue) != -1
+            return this.filterFunction(experience).indexOf(this.filterValue) != -1
         }
     }
 
     /**
-     * Gets the list of active entries.
+     * Gets the list of active experiences.
      */
-    get activeEntries() : Entry[] {
+    get activexperiences() : Experience[] {
         if(this.filterValue == "all") {
-            return this.dataService.library.entries
+            return this.dataService.library.experiences
         } else {
             var othis = this
-            return this.dataService.library.entries.filter((entry) => {
-                return othis.isActive(entry)
+            return this.dataService.library.experiences.filter((experience) => {
+                return othis.isActive(experience)
             })
         }
     }
     
     /**
-     * Gets the complete list of portfolio entries.
+     * Gets the complete list of portfolio experiences.
      */
-    get entries() : Entry[] {
-        return this.dataService.library.entries
+    get experiences() : Experience[] {
+        return this.dataService.library.experiences
     }
 
     /**
@@ -175,7 +175,7 @@ export class DashboardComponent  {
      */
     get categories() : string[] {
         let cats = []
-        for(let category in this.entryByField) {
+        for(let category in this.ExperienceByField) {
             cats.push(category)
         }
         return cats

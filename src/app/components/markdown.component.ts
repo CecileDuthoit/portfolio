@@ -2,7 +2,7 @@ import * as marked          from 'marked';
 import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { Http, Response }   from '@angular/http';
 import { DataService }      from '../services/data.service'
-import { Entry }            from '../entries/common'
+import { Experience }            from '../experiences/common'
 
 @Component({
   selector: 'markdown', 

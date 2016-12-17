@@ -1,0 +1,92 @@
+<div class="row">
+    <div class="col s12 m12">
+
+        <div class="card sticky-action">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img (click)="toogleExpand()" class="image-aspect-ratio activator" height="100px" [style.background-image]="sanitizeStyle('url(' + experience.thumbnailUrl +')')" />
+            </div>
+            
+            <div class="card-content" [style.min-height]="minHeight">
+                
+                <span (click)="toogleExpand()" class="card-title activator grey-text text-darken-4">{{experience.name}}<i class="material-icons right">click to open assets</i></span>
+
+                <br /><strong>Keywords: </strong>
+                <div class="chip" *ngFor="let tag of experience.tags">{{tag}}</div>
+                
+                <h4>Abstract</h4>
+
+                <markdown [data]="experience.abstract">
+                </markdown>
+
+                <h4>Analysis</h4>
+                {{ experience.conclusion }}
+            </div>
+
+            <div class="card-reveal">
+                <span (click)="toogleExpand()" class="card-title grey-text text-darken-4">{{experience.name}}<i class="material-icons right">click to close assets</i></span>
+
+                <!-- PDF Document -->
+             <!--   <div class="chip" *ngFor="let content of experience.content">  -->
+                    <div *ngIf="experience.content.contentType == contentType.PDFDocumentURL">
+                        
+                        <div style="text-align: center" class="margin-bottom: 1em;">
+                            <a class="waves-effect waves-light btn" 
+                            target="_blank"
+                            [href]="sanitizeRessourceUrl(experience.content.contentValue)">
+                            Download PDF
+                            </a>
+                            <br />
+                            ~
+                        </div>
+                        
+                        <object [data]="sanitizeRessourceUrl(experience.content.contentValue)" type="application/pdf" width="100%" height="800px">
+                            <a [href]="sanitizeRessourceUrl(experience.content.contentValue)">Link</a>
+                        </object>
+                    </div>
+              <!--  </div>  -->
+
+                <!-- Markdown document -->
+                <div *ngIf="experience.content.contentType == contentType.RawMarkdownDocument">
+                    <markdown [data]="experience.content.contentValue"></markdown>
+                </div>
+
+                <!-- Link document -->
+                <div *ngIf="experience.content.contentType == contentType.Link">
+                    <div style="text-align: center" class="margin-bottom: 1em;">
+                        <a class="waves-effect waves-light btn" 
+                        target="_blank"
+                        [href]="sanitizeRessourceUrl(experience.content.contentValue)">
+                        Link to document
+                        </a>
+                        <br />
+                    </div>
+                </div>
+
+            </div>
+           
+            <div class="card-action">
+                <strong>Competences: </strong> 
+                <div *ngFor="let competence of experience.competences" style="display: inline-block;">
+                    <div *ngIf="competence.type == competenceType.Communication"> 
+                        <div class="chip" style="background: #de5454;">{{competence.skillTitle}}</div>
+                    </div>
+                    <div *ngIf="competence.type == competenceType.SmartDevices">   
+                        <div class="chip" style="background: #BC8F8F;">{{competence.skillTitle}}</div>
+                    </div>
+                    <div *ngIf="competence.type == competenceType.IMiddlewareAndServices">   
+                        <div class="chip" style="background: #F4A460;">{{competence.skillTitle}}</div>
+                    </div>
+                    <div *ngIf="competence.type == competenceType.DataProcessing">   
+                        <div class="chip" style="background: #008080;">{{competence.skillTitle}}</div>
+                    </div>
+                    <div *ngIf="competence.type == competenceType.HumanitiesAndInnovation">   
+                        <div class="chip" style="background: #DB7093;">{{competence.skillTitle}}</div>
+                    </div>
+                    <div *ngIf="competence.type == competenceType.EnglishAndProject">   
+                        <div class="chip" style="background: #4682B4;">{{competence.skillTitle}}</div>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>

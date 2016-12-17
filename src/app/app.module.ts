@@ -10,11 +10,12 @@ import { AppComponent }  from './components/app.component';
 import { UserPanelComponent } from './components/userpanel.component';
 import { DashboardComponent } from './components/dashboard.component';
 import { MarkdownComponent } from './components/markdown.component';
-import { EntryViewerComponent } from './components/entry-viewer.component';
+import { ExperienceViewerComponent } from './components/experience-viewer.component';
 import { HomeComponent } from './components/home.component';
 import { GeneralInfoComponent } from './components/general-info.component';
 import { DataService } from './services/data.service';
 import { CompetencesComponent } from './components/competences.component';
+import { CompetenceViewerComponent } from './components/competence-viewer.component';
 
 import * as router from '@angular/router';
 
@@ -27,11 +28,12 @@ import * as router from '@angular/router';
   declarations: [ AppComponent, 
                   UserPanelComponent, 
                   DashboardComponent,
-                  EntryViewerComponent,
+                  ExperienceViewerComponent,
                   MarkdownComponent,
                   HomeComponent,
                   GeneralInfoComponent,
-                  CompetencesComponent
+                  CompetencesComponent,
+                  CompetenceViewerComponent,
                 ],
   providers:    [
     DataService,

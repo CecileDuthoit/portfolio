@@ -1,18 +1,15 @@
-<div class="container animated bounceInRight">
-    <div class="content-wrapper">
-        <div class="margin"></div>
-        <div class="content"><br />
-            <h3><a id="competences"> Competences</a></h3>
-
-            <div>
-                <table>
-                    <tr>
-                        <th>Name</th>    
-                        <th>Year</th>    
-                        <th>Duration (h)</th>
-                    </tr>
-                </table>
-            </div><!-- /.table-responsive -->
+<div class="container">
+    <br />
+    <br />
+    <br />
+    
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col s12" *ngFor="let competenceView of competencesViews ">
+                    <competence-viewer [competenceView]="competenceView"></competence-viewer>
+                </div>
+            </div>
         </div>
     </div>
 </div>

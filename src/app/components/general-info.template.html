@@ -2,188 +2,194 @@
 .background {
     background-color: #f2f2f2;
 }
+
 h1 {
  font-size: 420%; 
  color: black; 
- font-style: italic;
- }
+}
+
 h2 {
- font-size: 350%; 
- color: #333399; 
+ font-size: 275%;
  font-style: italic;
- }
-h3 {
- font-size: 200%; 
- color: black; 
- font-style: italic;
- }
+}
+
+th {
+    text-align: center;
+}
+
+.subject {
+    text-align: left;
+    font-weight: bold;
+} 
+
+.year, .duration {
+    text-align: center;
+}
 
 </style>
 
-<div class="container animated bounceInRight">
-                
-    <div class="container animated bounceInRight">
-        <div class="pageinfo-bar">
-            <div class="margin"></div>
-            <div class="content">
-                <h1>General Information</h1>
-                <p *ngIf="description">description TODO...................................</p>
+<div class="container animated bounceInRight"><br /><br />
+    <div class="content-wrapper" style="background: white;">
+        <div class="container"><br /><br />
+            
+            <div class="pageinfo-bar">
+                <div class="margin"></div>
+                <div class="content">
+                    <h1>General Information</h1>
+                    <p *ngIf="description">description TODO...................................</p>
+                </div>
+                <div class="margin"></div>
             </div>
-            <div class="margin"></div>
-        </div>
-        <div class="content-wrapper">
-            <div class="margin"></div>
-            <div class="content">
+            <div class="content-wrapper">
+                <div class="margin"></div>
+                    <div class="content">
+                        
+                        <h2><a style="color: #ff6666;" id="general_contact"> 1. Contact</a></h2>
+                            
+                            <div class="content">
+                                <img src="../images/logos/Logo_INSAToulouse-quadri.png" height="80px" align="right">
+                                <strong>Cécile DUTHOIT</strong><br>
+                                18/06/1994<br>INSA Toulouse - 5th year<em> Innovative Smart Systems</em><br>Permis B<br><br>
+                                <span class="glyphicon glyphicon-envelope"></span><a href="mailto:duthoit@etud.insa-toulouse.fr" target="_blank" style="color: black;"><strong>duthoit@etud.insa-toulouse.fr</strong></a><br>
+                                <span class="glyphicon glyphicon-user"></span><a href="https://www.linkedin.com/in/c%C3%A9cile-duthoit-92bb9011b" target="_blank" style="color: black;"><span class="fa fa-linkedin fa-fw fa-3x"><strong>LinkedIn</strong></span></a><br>
+                            </div>                           
+                        
+                        <h2><a id="general_cv" style="color: #ff6666;"> 2. Curriculum Vitae</a></h2>
+                                <div style="text-align: center" class="margin-bottom: 1em;">
+                                    <a class="btn btn-labeled btn-primary" type="button" style="width:100%;height:5%;font-size:120%;background:#990000"
+                                    target="_blank"
+                                    href="../../assets/CV_Cecile_Duthoit.pdf">
+                                    Click to open PDF version
+                                    </a>
+                                    <br />
+                                </div>
+
+                        <h2><a id="general_learning" style="color: #ff6666;"> 3. Learning Program for 5ISS</a></h2>
                     
-                    <h3><a id="general_contact"> 1. Contact</a></h3>
-                        
-                        <div class="content">
-                            <img src="../images/logos/Logo_INSAToulouse-quadri.png" height="100px" align="right">
-                        </div>
-                        
-                        <p>
-                            <strong>Cécile DUTHOIT</strong><br>
-                            18/06/1994<br>INSA Toulouse - 5th year<em> Innovative Smart Systems</em><br>Permis B<br><br>
-                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:duthoit@etud.insa-toulouse.fr" target="_blank">duthoit@etud.insa-toulouse.fr</a><br>
-                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="https://www.linkedin.com/in/c%C3%A9cile-duthoit-92bb9011b" target="_blank"><span class="fa fa-linkedin fa-fw fa-3x">LinkedIn</span></a><br>
-                        </p>
-                    
-                    <h3><a id="general_cv"> 2. Curriculum Vitae</a></h3>
-                        <button class="btn btn-labeled btn-primary" type="button" style="width:100%;height:5%;font-size:120%;" (click)="DownloadPDF()"><span class="btn-label"></span>Download a PDF version</button>
-                        <br /><br />
-                    <!--     <div class="content">
-                            <img src="../annexes/CV_Cecile_Duthoit.png" width="800px">
-                        </div>
-                        -->
-
-
-                    <h3><a id="general_learning"> 3. Learning Program for 5ISS</a></h3>
-                
-                        <div>
-                            <table>
-                                <tr class="background">
-                                    <th>Name</th>    
-                                    <th>Year</th>    
-                                    <th>Duration (h)</th>
-                                </tr>
-                                <tr>
-                                    <td class="subject">Professional Project (PPI : "Projet Professionnel Individualisé")</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">10</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject">Microcontrollers et Open-Source Hardware (MOSH)</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">20</td>
-                                </tr>
-                                <tr>
-                                    <td class="subject">Protocols for Connected Objects</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">30.5</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject">Wireless Communications for Connected Objects</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">5</td>
-                                </tr>
-                                <tr>
-                                    <td class="subject">Powering for Connected Objects</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">5</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject">Network Security for Connected Objects</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">5</td>
-                                </tr>
-                                <tr>
-                                    <td class="subject">Architecture of Services</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">31</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject">Middleware for Internet of Things</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">13.5</td>
-                                </tr>
-                                <tr>
-                                    <td class="subject">Adaptability and Cloud</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">12</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject">Software Engineering</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">6.25</td>
-                                </tr>
-                                <tr>
-                                    <td class="subject">Integrative Project</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">38.5</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject">English</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">35</td>
-                                </tr>
-                                <tr>
-                                    <td class="subject">Innovation / Acceptability / Business Development</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">20</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject">Creativity / TRIZ Methods</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">20.5</td>
-                                </tr>
-                                <tr>
-                                    <td class="subject">Team Management</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">20</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject">APS (Sport)</td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">25</td>
-                                </tr>
-                            </table>
-                        </div><!-- /.table-responsive --><br />
-                        
-                    <h3><a id="others"> 4. Other projects, interships, etc.</a></h3>
-                        
-                        <div>
-                            <table>
-                                <tr class="background">
-                                    <th>Name</th>    
-                                    <th>Year</th>    
-                                    <th>Duration (h)</th>
-                                </tr>
-                                <tr>
-                                    <td class="subject"><a href="#evs_internship">Implementation of Video over IP software component - Internship</a></td>
-                                    <td class="year">2016</td>
-                                    <td class="duration">4 months</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject" ><a href="#GSM_interception">Passive Interception on GSM network - Project</a></td>
-                                    <td class="year">2015</td>
-                                    <td class="duration">35</td>
-                                </tr>
-                                <tr>
-                                    <td class="subject"><a href="#GSM_security_process">Security on GSM Network - Analyze</a></td>
-                                    <td class="year">2015</td>
-                                    <td class="duration">7</td>
-                                </tr>
-                                <tr class="background">
-                                    <td class="subject"><a href="#am_radio_receptor">Conception of an AM Radio Receptor - Project</a></td>
-                                    <td class="year">2014</td>
-                                    <td class="duration">11</td>
-                                </tr>
-                            </table>
-                        </div><!-- /.table-responsive -->
-
-            <br /><br /></div>
-            <div class="margin"></div>
+                            <div>
+                                <table>
+                                    <tr class="background">
+                                        <th>Name</th>    
+                                        <th>Year</th>    
+                                        <th>Duration (h)</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Professional Project (PPI : "Projet Professionnel Individualisé")</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">10</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject">Microcontrollers et Open-Source Hardware (MOSH)</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Protocols for Connected Objects</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">30.5</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject">Wireless Communications for Connected Objects</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Powering for Connected Objects</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">5</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject">Network Security for Connected Objects</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Architecture of Services</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">31</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject">Middleware for Internet of Things</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">13.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Adaptability and Cloud</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">12</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject">Software Engineering</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">6.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Integrative Project</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">38.5</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject">English</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Innovation / Acceptability / Business Development</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">20</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject">Creativity / TRIZ Methods</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">20.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Team Management</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">20</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject">APS (Sport)</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">25</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /.table-responsive --><br />
+                            
+                        <h2><a id="others" style="color: #ff6666;"> 4. Other projects, interships, etc.</a></h2>
+                            
+                            <div>
+                                <table>
+                                    <tr class="background">
+                                        <th>Name</th>    
+                                        <th>Year</th>    
+                                        <th>Duration (h)</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Implementation of Video over IP software component - Internship</td>
+                                        <td class="year">2016</td>
+                                        <td class="duration">4 months</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject" >Passive Interception on GSM network - Project</td>
+                                        <td class="year">2015</td>
+                                        <td class="duration">35</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject">Security on GSM Network - Analysis</td>
+                                        <td class="year">2015</td>
+                                        <td class="duration">7</td>
+                                    </tr>
+                                    <tr class="background">
+                                        <td class="subject">Conception of an AM Radio Receptor - Project</td>
+                                        <td class="year">2014</td>
+                                        <td class="duration">11</td>
+                                    </tr>
+                                </table>
+                            </div><!-- /.table-responsive --><br /><br />
+                    </div>
+                <div class="margin"></div>
+            </div>
         </div>
     </div>
-    
 </div>
