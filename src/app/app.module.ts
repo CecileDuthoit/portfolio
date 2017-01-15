@@ -12,10 +12,12 @@ import { DashboardComponent } from './components/experience_components/dashboard
 import { MarkdownComponent } from './components/app_layout_components/markdown.component';
 import { ExperienceViewerComponent } from './components/experience_components/experience-viewer.component';
 import { HomeComponent } from './components/home_components/home.component';
-import { GeneralInfoComponent } from './components/general_info _components/general-info.component';
+import { GeneralInfoComponent } from './components/general_info_components/general-info.component';
 import { DataService } from './services/data.service';
 import { CompetencesComponent } from './components/competence_components/competences.component';
 import { CompetenceViewerComponent } from './components/competence_components/competence-viewer.component';
+import { ContactComponent} from './components/general_info_components/contact.component' ;
+import { CVComponent} from './components/general_info_components/cv.component' ;
 
 import * as router from '@angular/router';
 
@@ -32,8 +34,10 @@ import * as router from '@angular/router';
                   MarkdownComponent,
                   HomeComponent,
                   GeneralInfoComponent,
+                  ContactComponent,
                   CompetencesComponent,
                   CompetenceViewerComponent,
+                  CVComponent
                 ],
   providers:    [
     DataService,

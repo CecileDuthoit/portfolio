@@ -95,13 +95,20 @@ export class DashboardComponent  {
     getFilterFunction(filterName : string) : FilterFunction {
         switch(filterName) {
             case "category":
-                return (experience : Experience) => { return [experience.category] }
+            {
+                return (experience : Experience) => { return experience.category}
+            }
             case "experienceType":
+            {
                 return (experience : Experience) => { return [experienceType2Str(experience.experienceType)] }
+            }
             case "competenceType":
-                return (experience : Experience) => { return experience.competences.map((competence) => competenceType2Str(competence.id)) }
+            {                    
+                console.log("competenceType")
+                return (experience : Experience) => { return experience.competences.map((competence) => competenceType2Str(competence.id))}
+            }
             default:
-                return (experience : Experience) => { return [experience.category] }
+                return (experience : Experience) => { return experience.category }
         }
     }
 

@@ -1,0 +1,5 @@
+import './all/humanities.ts'
+import './all/smart-devices.ts'
+import './all/communication.ts'
+import './all/middleware-services.ts'
+import './all/other.ts'

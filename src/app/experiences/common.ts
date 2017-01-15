@@ -41,7 +41,7 @@ export interface Experience
 {
     name : string, 
     experienceType : ExperienceType
-    category : string
+    category : string[]
     tags : string[]
     abstract : string
     conclusion : string

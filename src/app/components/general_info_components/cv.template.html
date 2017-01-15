@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="container;layout-md" style="background-image:url('../../../images/wallpapers/fond-site.jpg');margin-right:130px;margin-left:130px;">
+        <div class="panel panel-default" style="margin-top:30px;margin-bottom:30px;margin-right:20px;margin-left:40px;">
+            <div class="panel-heading"><br />
+                <div class="panel-title" style="font-size: 2em;"><strong>Curriculum Vitae</strong></div>
+            </div>
+            <div class="panel-body">
+
+                <div class="card sticky-action"> 
+                   
+                    <div class="card-content" [style.min-height]="minHeight"> 
+                        <span (click)="toogleExpand()" class="card-title activator grey-text text-darken-4">
+                            <i class="material-icons right">click to open CV</i>
+                        </span>
+                    </div>
+
+                    <div class="card-reveal">
+                        <span (click)="toogleExpand()" class="card-title grey-text text-darken-4">
+                            <i class="material-icons right">click to close CV</i>
+                        </span>
+
+                        <div style="text-align: center" class="margin-bottom: 1em;">
+                            <a class="waves-effect waves-light btn" target="_blank" [href]="sanitizeRessourceUrl('../../../assets/CV_Cecile_Duthoit.pdf')">Download PDF</a>
+                        </div>
+                        
+                        <object [data]="sanitizeRessourceUrl('../../../assets/CV_Cecile_Duthoit.pdf')" type="application/pdf" width="100%" height="800px">
+                            <a [href]="sanitizeRessourceUrl('../../../assets/CV_Cecile_Duthoit.pdf')">Link</a>
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

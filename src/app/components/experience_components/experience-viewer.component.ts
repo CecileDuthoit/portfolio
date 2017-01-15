@@ -1,4 +1,5 @@
 import { Component, Input, ViewChild, ElementRef, trigger, state, style, transition, animate }  from '@angular/core';
+import { Router }                                                                               from '@angular/router'
 import { Http, Response }                                                                       from '@angular/http';
 import { Observable }                                                                           from 'rxjs/Observable';
 import { DataService }                                                                          from '../../services/data.service'
@@ -19,7 +20,7 @@ export class ExperienceViewerComponent  {
     public experienceType = ExperienceType
     public competenceType = CompetenceType
     private _expanded : boolean = false;
-    constructor(private sanitizer : DomSanitizer, private dataService : DataService) {}
+    constructor(private sanitizer : DomSanitizer, private dataService : DataService, private router : Router) {}
 
     /**
      * Minimal height of the Experience viewer component.
@@ -27,8 +28,14 @@ export class ExperienceViewerComponent  {
      * revealed. 
      */
     get minHeight() {
-        var minHeight = this._expanded ? "800px" : "200px"
-        var value = this.experience.content[0].contentType == ContentType.PDFDocumentURL ? minHeight : "200px"
+        var value;
+        if (this.experience.content != null)
+        {
+            var minHeight = this._expanded ? "800px" : "200px"
+            value = this.experience.content[0].contentType == ContentType.PDFDocumentURL ? minHeight : "200px"
+        }
+        else
+            value = "200px"
         return this.sanitizer.bypassSecurityTrustStyle(value)
     }
 

@@ -7,7 +7,7 @@
         <div class="valign-wrapper">
             <div class="col s4 m2 l1 valign left-align" style="font-size: 140%; color: white;"><strong>Sort By :</strong></div>
             <div *ngFor="let filter of filters;" class="col valign left-align">
-                <a  [routerLink]="['/portfolio/', filter.name, 'all']"
+                <a  [routerLink]="['/experiences/', filter.name, 'all']"
                     class="btn waves-effect waves-light valign" style="background: #b30000;">
                 {{filter.displayName}} 
                 </a>
@@ -19,10 +19,10 @@
         <div class="col s12">
             <ul class="tabs">
                 <li class="tab" >
-                    <a href [routerLink] = "['/portfolio/', filterName, 'all']">See all</a>
+                    <a href [routerLink] = "['/experiences/', filterName, 'all']">All</a>
                 </li>
                 <li class="tab animated bounceIn"  *ngFor="let category of categories">
-                    <a href [routerLink]="['/portfolio/', filterName, category]">{{category}}</a>
+                    <a href [routerLink]="['/experiences/', filterName, category]">{{category}}</a>
                 </li>
             </ul>
         </div>
