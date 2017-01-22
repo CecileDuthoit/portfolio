@@ -1,3 +1,4 @@
+<!--
 <style>
 .background {
     background-color: lightgrey;
@@ -26,7 +27,7 @@ th {
     text-align: center;
 }
 
-</style>
+</style>-->
 
 <div container>
     <contact style="margin-top:50px;"></contact>
@@ -34,45 +35,28 @@ th {
 
     <!-- COURSES -->
     <div class="container">
-        <div class="container;layout-md" style="background-image:url('../../../images/wallpapers/fond-site.jpg');margin-right:130px;margin-left:130px;">
+        <div class="container;layout-md;card sticky-action animated bounceInUp" style="background-image:url('../../../images/wallpapers/fond3.jpeg');margin-right:130px;margin-left:130px;">
             <div class="panel panel-default" style="margin-top:30px;margin-bottom:30px;margin-right:20px;margin-left:40px;">
                 <div class="panel-heading"><br />
                     <div class="panel-title" style="font-size: 2em;"><strong>Learning Program</strong></div>
                 </div><br /><br />
                 
-                <div class="panel-body" style="font-size: 1em;margin-right:100px;margin-left:100px;">
-
+                <div class="panel-body" style="font-size: 1em;margin-right:70px;margin-left:70px;">
                     <div class="list-group">
-
-                        <div class="row" style="height: 70px;">
-                            <div class="col 8">Name</div>
-                            <div class="col 2">Year</div>
-                            <div class="col 2">Duration (h)</div>
-                        </div>
-
                         <div *ngFor="let course of courses; let i = index" class="list-group-item" style="margin-bottom:-1px;">
-
-                            <div class="row" style="height:70px;">
-                                <span [ngSwitch]="isBackground()">
-                                    <span *ngSwitchCase="true">
-                                        <div class="background">                                                            
-                                            <div class="col 8">{{course.name}}</div>
-                                            <div class="col 2">{{course.year}}</div>
-                                            <div class="col 2">{{course.duration}} (h)</div>
-                                        </div>  
-                                    </span> 
-                                    <span *ngSwitchCase="false">
-                                        <div class="background">                                                            
-                                            <div class="row" style="height:70px;">
-                                                <div class="col 8">{{course.name}}</div>
-                                                <div class="col 2">{{course.year}}</div>
-                                                <div class="col 2">{{course.duration}} (h)</div>
-                                            </div>
-                                        </div>  
-                                    </span>
-                                </span>   
-                            </div>
-                        </div> 
+                        
+                            <div class="list-group-item-text" style="font-size: 1.25em;">
+                                <img [src]="'../../../images/icons/' + course.icon + '.png'" height="35px" align="left" style="margin-right:50px;">
+                                <strong>{{ course.name }}</strong>
+                                <span *ngIf="course.duration != 4">
+                                    <a style="font-size: 0.75em; color:black"><em>{{ course.year }} - {{course.duration}} (h)</em></a>
+                                </span>
+                                <span *ngIf="course.duration == 4">
+                                    <a style="font-size: 0.75em; color:black"><em>{{ course.year }} - {{course.duration}} (months)</em></a>
+                                </span>
+                                <img [src]="'../../../images/icons/' + course.color + '.png'"title="{{course.skillTheme}}" align="right" height="35px">
+                            </div><br />
+                        </div>
                     </div><br />
                 </div>
             </div>

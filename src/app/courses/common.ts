@@ -4,6 +4,9 @@ export interface Course
    name : string,
    year : number,
    duration : number,
+   icon : string,
+   color : string,
+   skillTheme : string
 }
 
 export class LibraryCourses

@@ -13,7 +13,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'general-info', component: GeneralInfoComponent },
   { path: 'competences', component: CompetencesComponent },
- { path: '**', component: HomeComponent  }
+  { path: '**', component: HomeComponent  }
 ];
 
 @NgModule({

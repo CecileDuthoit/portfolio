@@ -8,19 +8,23 @@ import { DomSanitizer, SafeHtml,SafeUrl,SafeStyle }             from '@angular/p
 
 export class CVComponent 
 {
-    private _expanded : boolean = false;
+    private _expanded : boolean = true;
     constructor(private sanitizer : DomSanitizer) {}
     
     sanitizeRessourceUrl(url : string) : SafeUrl {
         return this.sanitizer.bypassSecurityTrustResourceUrl(url)
     }   
 
-     toogleExpand() {
-        this._expanded = !this._expanded
+    open() {
+        this._expanded = true
+    } 
+
+    close() {
+        this._expanded = false
     } 
 
      get minHeight() {
-        var minHeight = this._expanded ? "800px" : "160px"
+        var minHeight = this._expanded ? "800px" : "80px"
         return this.sanitizer.bypassSecurityTrustStyle(minHeight)
     }
 }

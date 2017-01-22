@@ -6,7 +6,10 @@ export class HumanitiesSkills {
     public skillsValues : Skill[] ;
 
     public constructor(private skills : Skills) { 
-        this.skillsValues = [];
+        this.skillsValues = [skills.findById(50), skills.findById(51), skills.findById(52),
+        skills.findById(53), skills.findById(54), skills.findById(55), skills.findById(56),
+        skills.findById(57), skills.findById(58), skills.findById(59), skills.findById(501), 
+        skills.findById(502)];
     }
 
     get skillsHum() : Skill[] {

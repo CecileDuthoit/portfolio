@@ -34,6 +34,15 @@ export interface Content
     contentValue : string
 }
 
+export interface Abstract
+{
+    /* id : string; */
+    title : string;
+    subtitle : string;
+    description : string;
+    /* ref : string; */
+}
+
 /**
  * Represents an experience in the portfolio.
  */
@@ -43,7 +52,7 @@ export interface Experience
     experienceType : ExperienceType
     category : string[]
     tags : string[]
-    abstract : string
+    abstract : Abstract[]
     conclusion : string
     competences : Skill[]
     content : Content[]
@@ -76,17 +85,5 @@ function experienceType2Str(ct : ExperienceType) : string {
     }
 }
 
-function competenceType2Str(ct : CompetenceType) : string {
-    switch(ct) {
-        case CompetenceType.Communication: return "Communication";
-        case CompetenceType.DataProcessing: return "Data Processing";
-        case CompetenceType.EnglishAndProject: return "English & Project";
-        case CompetenceType.HumanitiesAndInnovation: return "Humanities & Innovation";
-        case CompetenceType.SmartDevices: return "Smart Devices";
-        case CompetenceType.IMiddlewareAndServices: return "Middleware & Services";
-        default: return "Unknown"
-    }
-}
-
 export { library }
-export { experienceType2Str, competenceType2Str }
+export { experienceType2Str }

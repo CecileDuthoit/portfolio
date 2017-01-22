@@ -1,9 +1,15 @@
+<style>
+a {
+    color:black;
+}
+</style>
+
 <div class="row">
     <div class="col s12 m12" *ngIf="experience != null">
 
-        <div class="card sticky-action">
+        <div class="card sticky-action animated bounceInUp">
             <div class="card-image waves-effect waves-block waves-light">
-                <img (click)="toogleExpand()" class="image-aspect-ratio activator" height="100px" [style.background-image]="sanitizeStyle('url(' + experience.thumbnailUrl +')')" />
+                <img class="image-aspect-ratio activator" height="100px" [style.background-image]="sanitizeStyle('url(' + experience.thumbnailUrl +')')" />
             </div>
             
             <div class="card-content" [style.min-height]="minHeight">
@@ -15,8 +21,12 @@
                 
                 <h4>Abstract</h4>
 
-                <markdown [data]="experience.abstract">
-                </markdown>
+                <div *ngFor="let abstract of experience.abstract">
+                    <a id={{abstract.id}} style="font-size: 1.75em;">{{ abstract.title }}</a><br >
+                    <a style ="font-size: 1.25em;"><em>{{ abstract.subtitle }}</em></a><br />
+                    <a>{{ abstract.description }}</a><br /><br />
+                </div>
+                <!-- <markdown [data]="experience.abstract"></markdown> -->
 
                 <h4>Analysis</h4>
                 {{ experience.conclusion }}
@@ -82,7 +92,6 @@
                         [href]="sanitizeRessourceUrl(experience.content.contentValue)">
                         Link to document
                         </a>
-                        <br />
                     </div>
                 </div>
             </div>

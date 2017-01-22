@@ -3,7 +3,8 @@ import { Component, Input, ViewChild, ElementRef, trigger,
 import { Http, Response }                                               from '@angular/http';
 import { Observable }                                                   from 'rxjs/Observable';
 import { DataService }                                                  from '../../services/data.service'
-import { Experience, experienceType2Str, competenceType2Str }           from '../../experiences/common'
+import { Experience, experienceType2Str }                               from '../../experiences/common'
+import { Skill, competenceType2Str }                                    from '../../competences/common'
 import * as $                                                           from 'jquery'
 import { Router, ActivatedRoute }                                       from '@angular/router';
 
@@ -104,8 +105,7 @@ export class DashboardComponent  {
             }
             case "competenceType":
             {                    
-                console.log("competenceType")
-                return (experience : Experience) => { return experience.competences.map((competence) => competenceType2Str(competence.id))}
+                return (experience : Experience) => { return experience.competences.map((competence) => competenceType2Str(competence.type))}
             }
             default:
                 return (experience : Experience) => { return experience.category }

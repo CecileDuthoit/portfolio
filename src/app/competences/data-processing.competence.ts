@@ -6,7 +6,8 @@ export class ProgrammingSkills {
     public skillsValues : Skill[] ;
 
     public constructor(private skills : Skills) { 
-        this.skillsValues = [];
+        this.skillsValues = [skills.findById(40), skills.findById(41), skills.findById(42), skills.findById(43), skills.findById(44), skills.findById(45),
+        skills.findById(46),skills.findById(47), skills.findById(48)];
     }
 
     get skillsProg() : Skill[] {
