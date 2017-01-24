@@ -46,7 +46,7 @@ let Experience : common.Experience = {
 Writing these papers made me read a lot of IEEE papers about the GSM network, its architecture, its protocols, etc. It made me wonder 
 how to use its weaknesses and empathize with the point of view of pirats to see the potentiel attacks the system could be victim of. 
 It also contributed to give me an great overview of all mobile communications, with the evolutions between each generation. Our interception 
-project also made me use radio software tools such as GNU Radio and manipulate USRPs, and deal (paintfully) with free, open-source, and undocumented 
+project also made me use radio software tools such as GNU Radio and manipulate USRPs, and deal (painfully) with free, open-source, and undocumented 
 softwares such as Kraken.
 `,
 

@@ -10,25 +10,25 @@ let Experience : common.Experience = {
 
     thumbnailUrl: "../images/wallpapers/iot.jpg",
 
-    tags: ["TODO"],
+    tags: ["Energy", "Batteries", "Supercondensators", "Charge and discharge", "Energy recovering", "Photovoltaic", "Thermogenerator", "Applications for IoT"],
 
     abstract: [     
         { 
             title : "Energy for IoT", 
             subtitle : "Course at INSA - Toulouse - 2016-2017", 
-            description : "todo "
+            description : "In this course, we discussed power and energy density, primary (non-rechargeable) and secondary (rechargeable) batteries, superconsidensators, ambiant energy recovery (using photovoltaic panels and thermogenerators). We talked about the different applications related to these technologies and related to sensors and smart devices."
         },
         { 
             title : "IoTracking: GPS tracking for boat regattas", 
             subtitle : "Project at INSA Toulouse - 2016-217", 
-            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about deploying an ad-hoc LoRa network from scratch and developing a user-friendly web application to allow people to follow the evolution of boat regattas in real time. This project was inspired by a discussion between two people working at the LAAS (Laboratory for Analysis and Architecture of Systems), one of whom was Thierry Monteil, our professor at INSA in the Electrical and Computer Sciences department (GEI, Génie Electronique et Informatique) and tutor for this project. The other one was passionate about sailing and a member of an association that organizes, among other activities, boat regattas. That club, named CVRL (Club de Voile des Rives de Léran), would like the public to be more involved during those regattas and would like to give them a user-friendly interface to follow the evolution of the races in real-time. The CVRL is located along the banks of Lake Montbel in Ariège, France. Because the lake is quite far from the surrounding cities, there is almost no network coverage at the site, which made it a real challenge. For carrying out this project, we divided our team into three subgroups, depending on the will and the skills of each. Since I had never done web programming in the past, I chose to work on the web application and the server. But even if each member of the team was particularly following one part of the project, we all worked together and we have been careful to always meet and discuss about everything."
+            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about deploying an ad-hoc LoRa network from scratch and developing a user-friendly web application to allow people to follow the evolution of boat regattas in real time. We had to choose which chips we wanted to work with, and also choose batteries to power them. Unfortunately, we chose batteries with three \"pins\" whereas the power input of our chips only had two, which made us \"tinker\" to remove that third one."
         },
     ],
 
- competences: [allSkills.findById(54)]
+ competences: [allSkills.findById(25), allSkills.findById(27)]
 ,
     conclusion: `
-TODO 
+This course teached me a lot about batteries and how to recover ambiant energy, which is a topic I am very interested in. I learned more about the photovoltaic panels' technical operating, and discovered how to proceed to recover thermal energy and the applications where we already use thermogenerators to recover energy from thermal losses (even if the efficiency is far from being ideal). Since energy is one the best challenges in IoT, energy recovering from surrounding environment is essential, in addition to energy consumption minimizing. More generally, I am convinced that the energy and ecological crisis we are currently living and exacerbating must be solved by both comsuption patterns changes and transition to renewable and \"green\" energy. For these reasons, I am glad to have followed this course.
 
 `,
 
