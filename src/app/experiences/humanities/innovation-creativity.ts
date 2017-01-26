@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Humanities", "Project Management"],
 
-    thumbnailUrl: "../images/wallpapers/creativity.jpg",
+    thumbnailUrl: "images/wallpapers/creativity.jpg",
 
     tags: ["Innovation", "Creativity", "TRIZ methods", "Decision-marking process", "Team spirit", "Social acceptability", "Business plan", "Strategy"],
 

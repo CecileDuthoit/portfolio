@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Data Processing"],
 
-    thumbnailUrl: "../images/wallpapers/semantic-web.png",
+    thumbnailUrl: "images/wallpapers/semantic-web.png",
 
     tags: ["Semantic web", "Data formats", "Ontology", "Resource Description Framework", "Range", "Domain", "Property", "Artificial intelligence", "World Wide Web Consortium"],
 

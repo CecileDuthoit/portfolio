@@ -25,7 +25,7 @@ let humanSkills = new HumanitiesSkills(skills);
 let hum : common.CompetenceView = {
     name: "Innovation and Humanities",
     type: CompetenceType.HumanitiesAndInnovation,
-    thumbnailUrl: "../../images/wallpapers/idea.jpg",
+    thumbnailUrl: "images/wallpapers/idea.jpg",
     skills: humanSkills.skillsHum,
 };
 

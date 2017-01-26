@@ -23,7 +23,7 @@ let sdSkills = new SDSkills(skills);
 let sd : common.CompetenceView = {
     name: "Smart Devices",
     type: CompetenceType.SmartDevices,
-    thumbnailUrl: "../../images/wallpapers/hardware2.jpg",
+    thumbnailUrl: "images/wallpapers/hardware2.jpg",
     skills: sdSkills.skillsSD,
 };
 

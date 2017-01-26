@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Data Processing"],
 
-    thumbnailUrl: "../images/wallpapers/big-data.jpg",
+    thumbnailUrl: "images/wallpapers/big-data.jpg",
 
     tags: ["Big data", "R", "RStudio", "Information extraction", "Plot data"],
 
@@ -33,7 +33,7 @@ let Experience : common.Experience = {
 `,
 
     content: [
-        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/EVS_poster.pdf` }
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Big_Data_Analysis.pdf` }
     ],
 };
 

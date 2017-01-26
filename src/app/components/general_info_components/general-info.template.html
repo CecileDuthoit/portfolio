@@ -35,7 +35,7 @@ th {
 
     <!-- COURSES -->
     <div class="container">
-        <div class="container;layout-md;card sticky-action animated bounceInUp" style="background-image:url('../../../images/wallpapers/fond3.jpeg');margin-right:130px;margin-left:130px;">
+        <div class="container;layout-md;card sticky-action animated bounceInUp" style="background-image:url('images/wallpapers/fond3.jpeg');margin-right:130px;margin-left:130px;">
             <div class="panel panel-default" style="margin-top:30px;margin-bottom:30px;margin-right:20px;margin-left:40px;">
                 <div class="panel-heading"><br />
                     <div class="panel-title" style="font-size: 2em;"><strong>Learning Program</strong></div>
@@ -46,7 +46,7 @@ th {
                         <div *ngFor="let course of courses; let i = index" class="list-group-item" style="margin-bottom:-1px;">
                         
                             <div class="list-group-item-text" style="font-size: 1.25em;">
-                                <img [src]="'../../../images/icons/' + course.icon + '.png'" height="35px" align="left" style="margin-right:50px;">
+                                <img [src]="'images/icons/' + course.icon + '.png'" height="35px" align="left" style="margin-right:50px;">
                                 <strong>{{ course.name }}</strong>
                                 <span *ngIf="course.duration != 4">
                                     <a style="font-size: 0.75em; color:black"><em>{{ course.year }} - {{course.duration}} (h)</em></a>
@@ -54,7 +54,7 @@ th {
                                 <span *ngIf="course.duration == 4">
                                     <a style="font-size: 0.75em; color:black"><em>{{ course.year }} - {{course.duration}} (months)</em></a>
                                 </span>
-                                <img [src]="'../../../images/icons/' + course.color + '.png'"title="{{course.skillTheme}}" align="right" height="35px">
+                                <img [src]="'images/icons/' + course.color + '.png'"title="{{course.skillTheme}}" align="right" height="35px">
                             </div><br />
                         </div>
                     </div><br />

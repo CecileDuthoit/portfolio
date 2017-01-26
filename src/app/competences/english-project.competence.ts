@@ -23,7 +23,7 @@ let engSkills = new EnglishSkills(skills);
 let eng : common.CompetenceView = {
     name: "English and Project",
     type: CompetenceType.EnglishAndProject,
-    thumbnailUrl: "../../images/wallpapers/sailing.jpg",
+    thumbnailUrl: "images/wallpapers/sailing.jpg",
     skills: engSkills.skillsEng,
 };
 

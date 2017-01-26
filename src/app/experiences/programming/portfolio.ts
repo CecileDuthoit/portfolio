@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Programming", "Humanities"],
 
-    thumbnailUrl: "../images/wallpapers/working.jpeg",
+    thumbnailUrl: "images/wallpapers/working.jpeg",
 
     tags: ["Portfolio", "Experiences", "Angular 2", "Typescript", "HTML"],
 

@@ -23,7 +23,7 @@ let midSkills = new MiddlewareSkills(skills);
 let mid : common.CompetenceView = {
     name: "Middleware and Services",
     type: CompetenceType.IMiddlewareAndServices,
-    thumbnailUrl: "../../images/wallpapers/prog.jpg",
+    thumbnailUrl: "images/wallpapers/prog.jpg",
     skills: midSkills.skillsMid,
 };
 

@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Project Management"],
 
-    thumbnailUrl: "../images/wallpapers/SE.jpg",
+    thumbnailUrl: "images/wallpapers/SE.jpg",
 
     tags: ["Project management", "Software documentation", "Software Requirement Specification", "Software Design Document", "Project Management Plan", "Agile", "Scrum"],
 

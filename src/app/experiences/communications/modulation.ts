@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Communications"],
 
-    thumbnailUrl: "../images/wallpapers/modulation.jpg",
+    thumbnailUrl: "images/wallpapers/modulation.jpg",
 
     tags: ["Telecommuncations", "GNURadio", "Software-based radio reception", "Software-based signal processing", "Phase", 
     "Radio waves", "Signal", "Modulation", "Amplitude", "Electronics", "Filter"],

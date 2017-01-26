@@ -23,7 +23,7 @@ let progSkills = new ProgrammingSkills(skills);
 let prog : common.CompetenceView = {
     name: "Data Processing",
     type: CompetenceType.DataProcessing,
-    thumbnailUrl: "../../images/wallpapers/data.jpg",
+    thumbnailUrl: "images/wallpapers/data.jpg",
     skills: progSkills.skillsProg,
 };
 

@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Communications", "Electronics"],
 
-    thumbnailUrl: "../images/wallpapers/renewable.jpg",
+    thumbnailUrl: "images/wallpapers/renewable.jpg",
 
     tags: ["Energy", "Batteries", "Supercondensators", "Charge and discharge", "Energy recovering", "Photovoltaic", "Thermogenerator", "Applications for IoT"],
 

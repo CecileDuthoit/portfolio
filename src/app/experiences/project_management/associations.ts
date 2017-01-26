@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Personnal,
     category: ["Project Management", "Humanities"],
 
-    thumbnailUrl: "../images/wallpapers/volunteering.jpg",
+    thumbnailUrl: "images/wallpapers/volunteering.jpg",
 
     tags: ["Association", "Volunteering", "Meeting", "Insurance", "Project management", "Communication", "Team spirit"],
 

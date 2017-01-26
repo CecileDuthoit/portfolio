@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Communications", "Programming", "Electronics", "Project Management"],
 
-    thumbnailUrl: "../images/wallpapers/sailing2.jpg",
+    thumbnailUrl: "images/wallpapers/sailing2.jpg",
 
     tags: ["LoRa", "Boat regattas", "GPS tracking", "Web programming", "Electronics", "Smart system", "Networking", "LoRaServer", "LoRaOne", 
     "Arduino","Angular2", "MongoDB", "Team management"],

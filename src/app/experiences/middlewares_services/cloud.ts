@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Middleware & Services"],
 
-    thumbnailUrl: "../images/wallpapers/cloud-computing.jpg",
+    thumbnailUrl: "images/wallpapers/cloud-computing.jpg",
 
     tags: ["Cloud computing", "Distant", "Virtual machines", "OM2M", "Availability", "Elasticity", "Storage", "Processing power"],
 

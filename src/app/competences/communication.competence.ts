@@ -25,7 +25,7 @@ let comSkills = new CommunicationSkills(skills);
 let com : common.CompetenceView = {
     name: "Communication",
     type: CompetenceType.Communication,
-    thumbnailUrl: "../../images/wallpapers/waves.jpeg",
+    thumbnailUrl: "images/wallpapers/waves.jpeg",
     skills: comSkills.skillsCom,
 };
 

@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Communications"],
 
-    thumbnailUrl: "../images/wallpapers/security2.jpg",
+    thumbnailUrl: "images/wallpapers/security2.jpg",
 
     tags: ["Security", "Hardware weaknesses", "Software bugs" , "Data security", "Cache attacks"],
 

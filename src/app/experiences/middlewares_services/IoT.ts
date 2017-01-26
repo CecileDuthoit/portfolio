@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Middleware & Services"],
 
-    thumbnailUrl: "../images/wallpapers/IoT.jpg",
+    thumbnailUrl: "images/wallpapers/IoT.jpg",
 
     tags: ["IoT", "OM2M", "oneM2M", "Machine to machine", "REST", "Java"],
 

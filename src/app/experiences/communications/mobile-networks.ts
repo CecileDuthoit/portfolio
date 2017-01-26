@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Communications"],
 
-    thumbnailUrl: "../images/wallpapers/mobiles.png",
+    thumbnailUrl: "images/wallpapers/mobiles.png",
 
     tags: ["Mobile networks", "Mobile generations", "Evolution of mobile communications", "2G", "3G", "4G", "5G", "Connected objects", "5GPP", "Smart cities", "Smart Devices", "Health issues", "Ethics in 5G", "IoT"],
 

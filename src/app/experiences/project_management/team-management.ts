@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Project Management"],
 
-    thumbnailUrl: "../images/wallpapers/team.jpg",
+    thumbnailUrl: "images/wallpapers/team.jpg",
 
     tags: ["Decision-marking process", "Meetings", "Team spirit", "Motivation", "Conflict management", "Management strategy"],
 

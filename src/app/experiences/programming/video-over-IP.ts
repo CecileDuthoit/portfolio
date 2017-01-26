@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Professional,
     category: ["Programming"],
 
-    thumbnailUrl: "../images/wallpapers/tv.jpg",
+    thumbnailUrl: "images/wallpapers/tv.jpg",
 
     tags: ["TV broadcast", "Video over IP", "Software Development", "C++", "Standards", "SMPTE", "RFC", "AES", "Meetings", "Communication"],
 

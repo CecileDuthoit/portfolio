@@ -8,24 +8,9 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Communications"],
 
-    // Ici une image jolie :)
-    thumbnailUrl: "../images/wallpapers/security.jpg",
+    thumbnailUrl: "images/wallpapers/security.jpg",
 
-    // Ici les tags correspondant à cette entrée.
-    // Il peut s'agir de compétences de la matrice de compétence,
-    // ou de mots clés.
     tags: ["Wireless Networks", "Mobile Networks", "GSM", "Security", "Interception", "Weaknesses", "Man-in-the-middle", "BTS"],
-
-    // ----------------------------------------------------------
-    // Ici, un résumé du travail présenté.
-    // On peut y insérer du *markdown*. 
-    // ----------------------------------------------------------
-
-    /* 
-    title : string;
-    subtitle : string;
-    description : string;
-    */
 
     abstract: [
         { 

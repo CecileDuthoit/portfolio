@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Communications"],
 
-    thumbnailUrl: "../images/wallpapers/network_coverage.jpg",
+    thumbnailUrl: "images/wallpapers/network_coverage.jpg",
 
     tags: ["Software Defined Network", "Networking", "Controller", "Remove intelligence from nodes"],
 

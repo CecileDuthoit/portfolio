@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Communications"],
 
-    thumbnailUrl: "../images/wallpapers/iot.jpg",
+    thumbnailUrl: "images/wallpapers/iot.jpg",
 
     tags: ["Wireless protocols", "Physical layer", "MAC layer", "IoT", "ZigBee", "LoRa", "SigFox", "Wi-Fi", "Mobile generations"],
 
@@ -33,7 +33,7 @@ let Experience : common.Experience = {
  competences: [allSkills.findById(22), allSkills.findById(23), allSkills.findById(20), allSkills.findById(54)]
 ,
     conclusion: `
-TODO 
+All these experiences teached me a lot about communication protocols for the Internet of Things. Each protocol has its own advantages (and disadvantages) and the choice of which technology to use must be done by condering every single aspect of the requirements of the system we want to build. Of course, because we are talking about sensors that need to last for a very long period, and thus, to have a very low power consumption, of one the biggest challenges for these protocols is the power consumption. 
 
 `,
 

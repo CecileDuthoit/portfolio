@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Programming"],
 
-    thumbnailUrl: "../images/wallpapers/android_travels.jpg",
+    thumbnailUrl: "images/wallpapers/android_travels.jpg",
 
     tags: ["Android application", "Driving awareness", "Google Speech Recognizer", "GPS location", "SMS", "Android Studio", "Java"],
 

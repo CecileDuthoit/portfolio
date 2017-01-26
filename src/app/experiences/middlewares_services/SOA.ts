@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Middleware & Services"],
 
-    thumbnailUrl: "../images/wallpapers/web_services.jpg",
+    thumbnailUrl: "images/wallpapers/web_services.jpg",
 
     tags: ["SOA", "SOAP", "REST", "Web service", "Orchestration", "PBEL", "Composite application", "WSDL", "JSON", "XML", "XSD"],
 

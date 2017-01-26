@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Electronics", "Communications"],
 
-    thumbnailUrl: "../images/wallpapers/hardware.jpg",
+    thumbnailUrl: "images/wallpapers/hardware.jpg",
 
     tags: ["sensors", "Gas sensor", "Arduino", "Shield", "Microcontrollers", "Optical sensors", "AIME", "Clean room", "Eagle", "LoRa chip"],
 
