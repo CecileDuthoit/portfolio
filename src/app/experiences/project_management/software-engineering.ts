@@ -47,10 +47,15 @@ how to apply methodologies of project.
 `,
     
     content: [
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Final_paper_Aware-D.pdf` },        
         { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/SRS_Aware_D.pdf` },        
         { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/SDD_Aware_D.pdf` },  
         { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/SPMP_Aware_D.pdf` },
-        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Unit_Tests_Aware_D.pdf` }
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Unit_Tests_Aware_D.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Final_Paper_IoTracking.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/PMP_IoTracking.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/SRS_IoTracking.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/SDD_IoTracking.pdf` },
     ]
       
 };

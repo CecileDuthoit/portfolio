@@ -12,7 +12,7 @@ let Experience : common.Experience = {
 
     tags: ["Wireless protocols", "Physical layer", "MAC layer", "IoT", "ZigBee", "LoRa", "SigFox", "Wi-Fi", "Mobile generations"],
 
-    abstract: [     //Zigbee - lora - sigfox - wifi - 
+    abstract: [    
         { 
             title : "Physical and MAC layers for IoT", 
             subtitle : "Course at INSA - Toulouse - 2016-2017", 
@@ -26,7 +26,7 @@ let Experience : common.Experience = {
         { 
             title : "IoTracking: GPS tracking for boat regattas", 
             subtitle : "Project at INSA Toulouse - 2016-217", 
-            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about developing a system to allow people to follow the evolution of boat regattas in real time. Because the lake to equip is quite far from the surrounding cities, there is almost no network coverage at the site, which made it a real challenge. That is why we chose to deploy an ad-hoc LoRa network from scratch, after having eliminated the other possibilities that we had thought about: SigFox, due to the low-budget requirement and frequency of emission needed, 2G-3G due to the incomplete network coverage over the lake, and \"home-made\" network due to the shortness of our planning."
+            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about developing a system to allow people to follow the evolution of boat regattas in real time. Because the lake to equip is quite far from the surrounding cities, there is almost no network coverage at the site, which made it a real challenge. That is why we chose to deploy an ad-hoc LoRa network from scratch, after having eliminated the other possibilities that we had thought about: SigFox, due to the low-budget requirement and frequency of emission needed, 2G-3G due to the incomplete network coverage over the lake, and \"home-made\" network due to the shortness of our planning. Please find our final paper in annex."
         },
     ],
 
@@ -42,6 +42,7 @@ TODO
         { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/SigFox_analysis.pdf` },
         { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/SigFox_analysis_presentation.pdf` },
         { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/ZigBee_exercise.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Final_Paper_IoTracking.pdf` },
     ],
 };
 

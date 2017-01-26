@@ -31,7 +31,7 @@ let Experience : common.Experience = {
         { 
             title : "IoTracking: GPS tracking for boat regattas", 
             subtitle : "Project at INSA Toulouse - 2016-217", 
-            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about deploying an ad-hoc LoRa network from scratch and developing a user-friendly web application to allow people to follow the evolution of boat regattas in real time. The server we implemented for this projet communicates with the application, our LoRa server and an Android application using REST requests."
+            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about deploying an ad-hoc LoRa network from scratch and developing a user-friendly web application to allow people to follow the evolution of boat regattas in real time. The server we implemented for this projet communicates with the application, our LoRa server and an Android application using REST requests. Please find our final paper and software design document in annex."
         },
     ], 
 
@@ -42,7 +42,11 @@ let Experience : common.Experience = {
 I learned a lot from these course and projects since I had never manipulated web services before. I learned how to design web services and orchestrate them, and I manipulated communications tools such as SOAP and REST requests (And I discovered that OpenESB is not the best way to create web services...).
 `,
 
-    content: null,
+    content: [
+            { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/SOAP-REST presentation.pdf` },
+            { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Final_Paper_IoTracking.pdf` },
+            { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/SDD_IoTracking.pdf` },
+    ],
 };
 
 common.library.experiences.push(Experience)

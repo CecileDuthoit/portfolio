@@ -8,7 +8,7 @@ let Experience : common.Experience = {
     experienceType: common.ExperienceType.Academic,
     category: ["Communications", "Electronics"],
 
-    thumbnailUrl: "../images/wallpapers/iot.jpg",
+    thumbnailUrl: "../images/wallpapers/renewable.jpg",
 
     tags: ["Energy", "Batteries", "Supercondensators", "Charge and discharge", "Energy recovering", "Photovoltaic", "Thermogenerator", "Applications for IoT"],
 
@@ -21,7 +21,7 @@ let Experience : common.Experience = {
         { 
             title : "IoTracking: GPS tracking for boat regattas", 
             subtitle : "Project at INSA Toulouse - 2016-217", 
-            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about deploying an ad-hoc LoRa network from scratch and developing a user-friendly web application to allow people to follow the evolution of boat regattas in real time. We had to choose which chips we wanted to work with, and also choose batteries to power them. Unfortunately, we chose batteries with three \"pins\" whereas the power input of our chips only had two, which made us \"tinker\" to remove that third one."
+            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about deploying an ad-hoc LoRa network from scratch and developing a user-friendly web application to allow people to follow the evolution of boat regattas in real time. We had to choose which chips we wanted to work with, and also choose batteries to power them. Unfortunately, we chose batteries with three \"pins\" whereas the power input of our chips only had two, which made us \"tinker\" to remove that third one. Please find our final paper and software design document in annex."
         },
     ],
 
@@ -32,7 +32,10 @@ This course teached me a lot about batteries and how to recover ambiant energy, 
 
 `,
 
-    content: null,
+    content: [
+            { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Final_Paper_IoTracking.pdf` },
+            { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/SDD_IoTracking.pdf` },
+    ],
 };
 
 common.library.experiences.push(Experience)

@@ -16,7 +16,7 @@ let Experience : common.Experience = {
         { 
             title : "Team management", 
             subtitle : "Course at INSA - Toulouse - 2016-2017", 
-            description : "In this course, we analyzed stategy of team management and human resources of big companies, what they managed to instaure and which are the disadvantages. Since we could choose which subject we prefered to work on, we chose to centered this course around three main themes: Conflict management, Motivation, and TODO. We discussed management strategy, how to motivate a team, how to manage potential conflicts, etc."
+            description : "In this course, we analyzed stategy of team management and human resources of big companies, what they managed to instaure and which are the disadvantages. Since we could choose which subject we prefered to work on, we chose to centered this course around twon main themes: Conflict management and Motivation. We discussed management strategy, how to motivate a team, how to manage potential conflicts, etc."
         },
         { 
             title : "Amicale INSA", 
@@ -26,7 +26,7 @@ let Experience : common.Experience = {
         { 
             title : "IoTracking: GPS tracking for boat regattas", 
             subtitle : "Project at INSA Toulouse - 2016-217", 
-            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about deploying an ad-hoc LoRa network from scratch and developing a user-friendly web application to allow people to follow the evolution of boat regattas in real time. This project was inspired by a discussion between two people working at the LAAS (Laboratory for Analysis and Architecture of Systems), one of whom was Thierry Monteil, our professor at INSA in the Electrical and Computer Sciences department (GEI, Génie Electronique et Informatique) and tutor for this project. The other one was passionate about sailing and a member of an association that organizes, among other activities, boat regattas. That club, named CVRL (Club de Voile des Rives de Léran), would like the public to be more involved during those regattas and would like to give them a user-friendly interface to follow the evolution of the races in real-time. The CVRL is located along the banks of Lake Montbel in Ariège, France. Because the lake is quite far from the surrounding cities, there is almost no network coverage at the site, which made it a real challenge. For carrying out this project, we divided our team into three subgroups, depending on the will and the skills of each. Since I had never done web programming in the past, I chose to work on the web application and the server. But even if each member of the team was particularly following one part of the project, we all worked together and we have been careful to always meet and discuss everything."
+            description : "The integrative projects are specific to the Innovative Smart Systems specialization. They are transdisciplinary projects that encourage students to exercise their skills in different domains. The project we chose was about deploying an ad-hoc LoRa network from scratch and developing a user-friendly web application to allow people to follow the evolution of boat regattas in real time. For carrying out this project, we divided our team into three subgroups, depending on the will and the skills of each. Since I had never done web programming in the past, I chose to work on the web application and the server. But even if each member of the team was particularly following one part of the project, we all worked together and we have been careful to always meet and discuss everything. Please find our final paper and project management plan in annex."
         },
        
     ], 
@@ -41,7 +41,9 @@ These experiences, from academic ones to personal investments teached me the bes
     
     content: [
         { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Amicale_paper_analysis.pdf` },
-        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Amicale_poster_analysis.pdf` }
+        { contentType: common.ContentType.PDFDocumentURL, contentValue: `assets/Amicale_poster_analysis.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Final_Paper_IoTracking.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/PMP_IoTracking.pdf` },
     ],
       
 };

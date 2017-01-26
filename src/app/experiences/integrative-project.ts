@@ -39,7 +39,11 @@ reused the knowledge that I had acquired during my semester abroad for another p
     allSkills.findById(61), allSkills.findById(62), allSkills.findById(63), allSkills.findById(64)]
 ,
     content: [
-        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Poster_IoTracking.pdf` }
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Final_Paper_IoTracking.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/Poster_IoTracking.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/PMP_IoTracking.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/SRS_IoTracking.pdf` },
+        { contentType: common.ContentType.PDFDocumentURL, contentValue:`assets/SDD_IoTracking.pdf` },
     ],
 };
 

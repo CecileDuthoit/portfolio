@@ -1,8 +1,0 @@
-//import './dummy'
-import './smart_devices/AIME'
-import './wireless_networks/gsm-network'
-import './wireless_networks/mobile-broadband-networks'
-import './wireless_networks/modulation'
-import './software_programming/video-over-IP'
-import './software_programming/android-programming'
-import './project_management/associations'
